@@ -1,0 +1,11 @@
+
+<h1>CITY GALERY</h1>
+<a href="/places">MAP PLACES</a>
+<section id="photo-galery">
+    {{!-- <h1>{{user.myplaces}}</h1> --}}
+    {{#each user.myplaces}}
+    <picture name={{this.name}} class="photo-pic">
+       <a href="/edit/{{this._id}}"><img class="pic-image" src="{{this.picture.path}}" alt="{{this.name}}"/></a>
+    </picture>
+    {{/each}} 
+</section>
